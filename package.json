@@ -1,0 +1,29 @@
+{
+  "name": "again",
+  "version": "1.0.0",
+  "description": "",
+  "main": "rollup.config.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@angular/animations": "^5.0.1",
+    "@angular/cdk": "^5.0.0-rc0",
+    "@angular/common": "^5.0.1",
+    "@angular/compiler": "^5.0.1",
+    "@angular/compiler-cli": "^5.0.1",
+    "@angular/core": "^5.0.1",
+    "@angular/forms": "^5.0.1",
+    "@angular/material": "^5.0.0-rc0",
+    "@angular/platform-browser": "^5.0.1",
+    "rollup": "^0.51.6",
+    "typescript": "^2.6.1",
+    "uglify-js": "^3.1.9"
+  },
+  "scripts": {
+    "transpile": "ngc",
+    "package": "rollup -c",
+    "minify": "uglifyjs dist/bundles/rightclicktrigger.umd.js --screw-ie8 --compress --mangle --comments --output dist/bundles/rightclicktrigger.umd.min.js",
+    "build": "npm run transpile && npm run package && npm run minify"
+  },
+  "author": "Iwan van Zijderveld",
+  "license": "MIT"
+}
